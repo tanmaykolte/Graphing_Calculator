@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/script.js" type="module"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="controls">
+      <h1>Graphing Calculator</h1>
+      <div class="input_container">
+        <div class="slider_container">
+          <span class="material-icons" id="hide_time_setting">
+            settings
+          </span>
+          <h3>Time</h3>
+          <input
+            id="time_slider"
+            type="range"
+            min="1"
+            max="50"
+            value="2"
+            step="0.01"
+          />
+          <input id="time_val" value="2" />
+        </div>
+        <div class="slider_settings" id="ctrl_1">
+          <label class="slider_settings_info"
+            >----- Slider Setting ------</label
+          >
+          <label class="slider_settings_info_min">Minimum</label>
+          <label class="slider_settings_info_steps">Steps</label>
+          <label class="slider_settings_info_max">Maximum</label>
+          <input id="time_min" value="1" />
+          <input id="time_step" value="0.01" />
+          <input id="time_max" value="50" />
+        </div>
+      </div>
+      <div class="input_container">
+        <div class="slider_container">
+          <span class="material-icons" id="hide_amp_setting">
+            settings
+          </span>
+          <h3>Amplitude</h3>
+          <input
+            id="amp_slider"
+            type="range"
+            min="1"
+            max="50"
+            value="1"
+            step="0.01"
+          />
+          <input id="amp_val" value="1" />
+        </div>
+        <div class="slider_settings" id="ctrl_2">
+          <label class="slider_settings_info"
+            >----- Slider Setting ------</label
+          >
+          <label class="slider_settings_info_min">Minimum</label>
+          <label class="slider_settings_info_steps">Steps</label>
+          <label class="slider_settings_info_max">Maximum</label>
+          <input id="amp_min" value="1" />
+          <input id="amp_step" value="0.01" />
+          <input id="amp_max" value="50" />
+        </div>
+      </div>
+
+      <div class="input_container">
+        <div class="slider_container">
+          <span class="material-icons" id="hide_width_setting">
+            settings
+          </span>
+          <h3>Duration</h3>
+          <input
+            id="width_slider"
+            type="range"
+            min="1"
+            max="100"
+            value="1"
+            step="1"
+          />
+          <input id="width_val" value="1" />
+        </div>
+        <div class="slider_settings" id="ctrl_3">
+          <label class="slider_settings_info"
+            >----- Slider Setting ------</label
+          >
+          <label class="slider_settings_info_min">Minimum</label>
+          <label class="slider_settings_info_steps">Steps</label>
+          <label class="slider_settings_info_max">Maximum</label>
+          <input id="width_min" value="1" />
+          <input id="width_step" value="1" />
+          <input id="width_max" value="100" />
+        </div>
+      </div>
+      <div class="input_container">
+        <div class="slider_container">
+          <span class="material-icons" id="hide_phase_setting">
+            settings
+          </span>
+          <h3>Phase</h3>
+          <input
+            id="phase_slider"
+            type="range"
+            min="-50"
+            max="50"
+            value="0"
+            step="0.01"
+          />
+          <input id="phase_val" value="1" />
+        </div>
+        <div class="slider_settings" id="ctrl_4">
+          <label class="slider_settings_info"
+            >----- Slider Setting ------</label
+          >
+          <label class="slider_settings_info_min">Minimum</label>
+          <label class="slider_settings_info_steps">Steps</label>
+          <label class="slider_settings_info_max">Maximum</label>
+          <input id="phase_min" value="-50" />
+          <input id="phase_step" value="0.01" />
+          <input id="phase_max" value="50" />
+        </div>
+      </div>
+      <div class="input_container" id="add_wave_parent">
+        <div class="slider_container">
+          <h3>Add more Sine Wave</h3>
+          <span class="material-icons" id="add_wave_btn">
+            add_box
+          </span>
+        </div>
+      </div>
+    </div>
+    <canvas
+      id="canvas"
+      width="200"
+      height="100"
+      style="border:1px solid #000000;"
+    >
+      Your browser does not support the HTML5 canvas tag.
+    </canvas>
+
+    <div id="arrow_keys">
+      <span id="up_arrow" class="material-icons">
+        keyboard_arrow_up
+      </span>
+      <span id="left_arrow" class="material-icons">
+        keyboard_arrow_left
+      </span>
+      <span id="right_arrow" class="material-icons">
+        keyboard_arrow_right
+      </span>
+      <span id="down_arrow" class="material-icons">
+        keyboard_arrow_down
+      </span>
+      <span id="reset" class="material-icons">
+        my_location
+      </span>
+    </div>
+    <div class="grid_container">
+      <div class="grid_layer">
+        <h3 class="grid_btn_label">Grid</h3>
+        <span class="material-icons" id="grid_btn">
+          toggle_on
+        </span>
+      </div>
+
+      <div class="grid_layer">
+        <h3 class="grid_btn_label">Semi-Grid</h3>
+        <span class="material-icons" id="semigrid_btn">
+          toggle_on
+        </span>
+      </div>
+    </div>
+    <div id="tooltip"></div>
+  </body>
+</html>

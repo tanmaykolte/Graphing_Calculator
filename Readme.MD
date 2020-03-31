@@ -13,3 +13,13 @@ Sine waves are generated with random colors, hover over them to get their x,y va
 ## Parameters
 
 Each parameter supports slider or user to enter values, click on setting icon to open up slider settings , minimum and maximum value of the slider and its steps.
+
+## SERVER
+
+Run a simple python server to start the application locally.
+
+```python
+python server.py
+```
+
+You can find the localhost URL at the output.
